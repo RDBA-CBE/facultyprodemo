@@ -611,10 +611,10 @@ const Header = () => {
                   <DropdownMenuContent className="w-56" align="end">
                     {/* <DropdownMenuLabel>My Account</DropdownMenuLabel> */}
                     {/* <DropdownMenuSeparator /> */}
-                    <DropdownMenuItem onClick={() => router.push("/profile")}>
+                     {/*  <DropdownMenuItem onClick={() => router.push("/profile")}>
                       <User className="mr-2 h-4 w-4" />
                       <span>Profile</span>
-                    </DropdownMenuItem>
+                    </DropdownMenuItem> */}
 
                     {/* <DropdownMenuItem
                       onClick={() => router.push("/saved-jobs")}

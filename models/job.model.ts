@@ -127,6 +127,10 @@ const job = {
         url += `&college=${encodeURIComponent(data.colleges)}`;
       }
 
+      if (data.created_by) {
+        url += `&created_by=${encodeURIComponent(data.created_by)}`;
+      }
+
 
       instance()
         .get(url)

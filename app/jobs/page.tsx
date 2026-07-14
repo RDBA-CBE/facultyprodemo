@@ -386,6 +386,7 @@ export default function JobsPage() {
     return m?.[0] ?? "";
   })();
   const hasSimilarQuery = Boolean(jobSlugFromQuery && jobIdFromQuery);
+
   const searchParam = searchParams.get("search");
   const locationParam = searchParams.get("location");
   const collegeParam = searchParams.get("college");
@@ -1118,11 +1119,14 @@ ${userName}`;
 
       // Keep selected departments stable; avoid auto-removing chips on facet updates.
 
-      const collegeList = res?.data?.colleges?.map((item) => ({
-        value: item.id,
-        label: item.college_name,
-        job_count: item.job_count,
-      }));
+      const allowedCollegeIds = new Set(collegeIdRef.current ?? []);
+      const collegeList = res?.data?.colleges
+        ?.filter((item) => allowedCollegeIds.has(item.id))
+        .map((item) => ({
+          value: item.id,
+          label: item.college_name,
+          job_count: item.job_count,
+        }));
       const categoryList = res?.data?.job_categories?.map((item) => ({
         value: item.id,
         label: item.name,
@@ -1685,7 +1689,6 @@ ${userName}`;
 
   const similarJob = async (job = null) => {
     if (!collegeIdRef.current || !Array.isArray(collegeIdRef.current) || collegeIdRef.current.length === 0) return;
-    console.log("jobId", job);
     setState({ similarJobLoading: true });
     try {
       const body: any = {
@@ -1696,9 +1699,17 @@ ${userName}`;
       if (debouncedSearch) body.search = debouncedSearch;
 
       const res: any = await Models.job.similar_job(body);
-      console.log("similarJob", res);
+
+      const profileStr = localStorage.getItem("user");
+      const profile = JSON.parse(profileStr);
+ 
+       const user: any = await Models.profile.details(profile.id);
+const filteredData = res?.results?.filter((item) =>
+  user?.college_ids.includes(item?.college?.id)
+);
+
       setState({
-        similarJobs: res?.results ?? [],
+        similarJobs: filteredData ?? [],
         similarJobLoading: false,
       });
     } catch (error) {
@@ -1729,7 +1740,8 @@ ${userName}`;
           setShowJobDetail(true);
         }
       });
-      similarJob();
+      // similarJob is called from mount useEffect after userDetail completes
+      if (collegeIdRef.current?.length) similarJob();
       return;
     }
     // Leaving detail query (`slug` + `id`) back to plain `/jobs` should rehydrate list mode.
@@ -1932,10 +1944,12 @@ ${userName}`;
     try {
       console.log("fetching user details for userId in try:", profile.id);
       const res: any = await Models.profile.details(profile.id);
+
       collegeIdRef.current = res.college_ids;
       setState({
         loading: false,
         college_id: res.college_ids,
+        user:res
       });
     } catch (error: any) {
       setState({ loading: false });
@@ -2098,7 +2112,9 @@ ${userName}`;
     const freeze = structuredSearchFreezeRef.current;
     let searchKeyword: string | null = null;
 
-    if (collegeIdRef.current) {
+    if (f?.colleges?.length > 0) {
+      body.college_id = f.colleges;
+    } else if (collegeIdRef.current) {
       body.college_id = collegeIdRef.current;
     }
 
@@ -2155,9 +2171,7 @@ ${userName}`;
         f.academic_responsibilities;
     }
 
-    if (f?.colleges?.length > 0) {
-      body.colleges = f.colleges;
-    }
+
 
     if (f?.tags?.length > 0) {
       body.tags = f.tags?.map((tag) => tag.value).join(",");
