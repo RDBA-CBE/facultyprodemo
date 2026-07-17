@@ -9,7 +9,7 @@ export const PROPERTY_LIST_PAGE = 12;
 
 export const dayNames = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 
-export const FRONTEND_URL = "https://www.facultypro.in/";
+export const FRONTEND_URL = "https://demo.facultypro.in";
 
 export const  CAPTCHA_SITE_KEY = "6LeEe9gsAAAAAKddSPmwNUF4J-v7zaz8CgeKZ7n3"
 
