@@ -97,9 +97,10 @@ import FilterbarNew from "@/components/component/filterbarNew.component";
 import SkeletonLoader from "@/app/jobs/SkeletonLoader";
 // import { Failure, Success } from "@/components/common-components/toast";
 
-export default function JobsPage({ params }: { params: Promise<{ id: string }> } & any) {
+export default function JobDetailClient({ params }: { params: Promise<{ slug: string[] }> }) {
   const searchParams = useSearchParams();
-  const { id: jobIdParam } = use(params);
+  const { slug } = use(params);
+  const jobIdParam = Array.isArray(slug) ? slug[0] : slug;
 
   const router = useRouter();
   const searchParam = searchParams.get("search");
@@ -1936,7 +1937,7 @@ ${userName}`;
                                   setSelectedJob(job);
                                   setState({ jobID: job.id });
                                   jobDetail(job.id);
-                                  router.replace(`/job-detail/${job.id}`, {
+                                  router.replace(job?.slug ? `/jobs/${job.slug}` : "/jobs", {
                                     scroll: false,
                                   });
                                 }}

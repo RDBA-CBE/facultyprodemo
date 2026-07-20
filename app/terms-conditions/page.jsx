@@ -6,7 +6,7 @@ export const metadata = {
   description:
     "Review the terms and conditions governing the use of FacultyPro, India's academic job portal for faculty recruitment.",
   alternates: {
-    canonical: "https://www.facultypro.in/terms-conditions",
+    canonical: "https://demo.facultypro.in/terms-conditions",
   },
   robots: { index: true, follow: true },
 };

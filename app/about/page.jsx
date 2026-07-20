@@ -15,11 +15,11 @@ export const metadata = {
     title: "About FacultyPro – India's Academic Recruitment Platform",
     description:
       "FacultyPro connects qualified educators with reputable colleges and institutions across India.",
-    url: "https://www.facultypro.in/about",
+    url: "https://demo.facultypro.in/about",
     type: "website",
   },
   alternates: {
-    canonical: "https://www.facultypro.in/about",
+    canonical: "https://demo.facultypro.in/about",
   },
 };
 

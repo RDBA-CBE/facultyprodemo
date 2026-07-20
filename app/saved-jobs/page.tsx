@@ -165,7 +165,7 @@ export default function SavedJobsPage() {
                     key={item.id || item.id}
                     className="cursor-pointer transition-transform hover:scale-105"
                     onClick={() =>
-                      router.push(`/jobs?slug=${item.slug}`)
+                      router.push(item?.job?.slug ? `/jobs/${item.job.slug}` : "/jobs")
                     }
                     
                   >

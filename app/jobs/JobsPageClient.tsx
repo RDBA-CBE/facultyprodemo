@@ -2993,7 +2993,8 @@ const filteredData = res?.results?.filter((item) =>
                               key={job.id}
                               id={`job-list-item-${job.id}`}
                               onClick={() => {
-                                router.push(`/jobs/${job.slug}/${job.id}`);
+                                const jobUrl = job?.slug ? `/jobs/${job.slug}` : "/jobs";
+                                router.push(jobUrl);
 
                                 setSelectedJob(job);
                                 setState({ jobID: job.id });
@@ -4451,7 +4452,8 @@ const filteredData = res?.results?.filter((item) =>
                                       getDepartment(e, id)
                                     }
                                     onClick={() => {
-                                      router.push(`/jobs/${job?.slug}/${job?.id}`);
+                                      const jobUrl = job?.slug ? `/jobs/${job.slug}` : "/jobs";
+                                      router.push(jobUrl);
                                       similarJob(job);
                                     }}
                                   />
@@ -4474,7 +4476,8 @@ const filteredData = res?.results?.filter((item) =>
                                       getDepartment(e, id)
                                     }
                                     onClick={() => {
-                                      router.push(`/jobs/${job?.slug}/${job?.id}`);
+                                      const jobUrl = job?.slug ? `/jobs/${job.slug}` : "/jobs";
+                                      router.push(jobUrl);
                                       similarJob(job);
                                     }}
                                   />

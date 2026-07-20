@@ -133,7 +133,7 @@ export const JobCard: React.FC<JobCardProps> = ({
           {job?.college?.college_logo ? (
             <img
               src={job?.college?.college_logo}
-              alt="company logo"
+              alt={`${job?.college?.name || "College"} logo`}
               style={{ objectFit: "contain" }}
               className="w-10 h-10 rounded-lg object-cover border border-gray-300"
             />

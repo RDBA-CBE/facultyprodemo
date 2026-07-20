@@ -11,11 +11,11 @@ export const metadata = {
   openGraph: {
     title: "Contact FacultyPro – Get in Touch",
     description: "Reach out to FacultyPro for support with academic recruitment and faculty job listings.",
-    url: "https://www.facultypro.in/contact",
+    url: "https://demo.facultypro.in/contact",
     type: "website",
   },
   alternates: {
-    canonical: "https://www.facultypro.in/contact",
+    canonical: "https://demo.facultypro.in/contact",
   },
 };
 

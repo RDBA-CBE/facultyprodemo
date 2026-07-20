@@ -5,11 +5,13 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: "*",
-        allow: ["/", "/jobs", "/about", "/contact", "/job-detail/"],
+        allow: ["/", "/jobs", "/jobs/", "/about", "/contact"],
         disallow: [
+          "/job-detail/",
           "/profile/",
           "/saved-jobs",
           "/hr-registeration",
+          "/hr-registration",
           "/change-password",
           "/forget-password",
           "/reset-password",
@@ -17,13 +19,17 @@ export default function robots(): MetadataRoute.Robots {
           "/remove-account",
           "/old-profile",
           "/profile1",
-          "/home1",
-          "/test",
+          "/home/",
+          "/home1/",
+          "/test/",
+          "/jobs-list/",
+          "/feedback/",
+          "/applicant_availability/",
           "/api/",
         ],
       },
     ],
-    sitemap: "https://www.facultypro.in/sitemap.xml",
-    host: "https://www.facultypro.in",
+    sitemap: "https://demo.facultypro.in/sitemap.xml",
+    host: "https://demo.facultypro.in",
   };
 }

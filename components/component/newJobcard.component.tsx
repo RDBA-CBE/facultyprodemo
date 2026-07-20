@@ -44,6 +44,7 @@ interface JobCardProps {
     matches_user_location?: boolean;
     immediate_join?: boolean;
     categories?: any;
+    slug?: string;
   };
   isProfile?: boolean;
   onClick?: () => void;
@@ -107,10 +108,14 @@ export const NewJobCard: React.FC<JobCardProps> = ({
     }
   };
 
+  // Always link cards to the indexable, canonical job URL.
+  const jobUrl = job?.slug ? `/jobs/${job.slug}` : "/jobs";
+
   return (
-    <div
+    <a
+      href={jobUrl}
       className=" border-b  border-[#c7c7c787] py-5 px-3  transition-all duration-200 cursor-pointer group flex flex-col md:flex-row "
-      onClick={onClick}
+      onClick={(e) => { e.preventDefault(); onClick?.(); }}
     >
       <div className="flex flex-wrap gap-2 mb-3 md:mb-0 md:mr-3">
         {isProfile && (
@@ -127,7 +132,7 @@ export const NewJobCard: React.FC<JobCardProps> = ({
           {job?.college?.college_logo ? (
             <img
               src={job?.college?.college_logo}
-              alt="company logo"
+              alt={`${job?.college?.name || "College"} logo`}
               style={{ objectFit: "contain" }}
               className="w-10 h-10 rounded-3xl object-cover border border-gray-100"
               onClick={(e) => onCollegeClick(e, job?.college?.id)}
@@ -253,10 +258,12 @@ export const NewJobCard: React.FC<JobCardProps> = ({
           </button>
         </div>
 
-        <button className=" order-0 md:order-1 bg-[#1E3786] w-fit mb-3 text-sm border border-xl border-[#1E3786] rounded rounded-3xl  px-6 py-1  hover:bg-[#1E3786] transition-colors text-white hover:text-white">
+        <span
+          className=" order-0 md:order-1 bg-[#1E3786] w-fit mb-3 text-sm border border-xl border-[#1E3786] rounded rounded-3xl  px-6 py-1  hover:bg-[#1E3786] transition-colors text-white hover:text-white"
+        >
           View Job
-        </button>
+        </span>
       </div>
-    </div>
+    </a>
   );
 };

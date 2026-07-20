@@ -7,7 +7,7 @@ export const metadata = {
   description:
     "Read FacultyPro's privacy policy to understand how we collect, use, and protect your personal data on our academic recruitment platform.",
   alternates: {
-    canonical: "https://www.facultypro.in/privacy-policy",
+    canonical: "https://demo.facultypro.in/privacy-policy",
   },
   robots: { index: true, follow: true },
 };

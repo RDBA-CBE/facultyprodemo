@@ -369,7 +369,7 @@ const FindYourJob = ({ collegeId }: { collegeId?: any }) => {
                   <div
                     key={job.id}
                     className={`${jobIndex === 0 ? "find-job-card-first " : ""}p-3 md:p-5 border border-[#c7c7c787] transition-all duration-300 bg-white cursor-pointer group hover:bg-[#1E3786] hover:border-gray-400 hover:-translate-y-1 hover:shadow-2xl hover:shadow-gray-500 h-full`}
-                    onClick={() => router.push(`/jobs/${job.slug}/${job.id}`)}
+                    onClick={() => router.push(`/jobs/${job.slug}`)}
                   >
                     <div className="flex items-start justify-between mb-3 h-full">
                       <div className="flex  items-start gap-3 w-full h-full">
@@ -473,7 +473,7 @@ const FindYourJob = ({ collegeId }: { collegeId?: any }) => {
                             <div className="flex items-center justify-between w-100 pt-3">
                               <button
                                 onClick={() =>
-                                  router.push(`/jobs/${job.slug}/${job.id}`)
+                                  router.push(`/jobs/${job.slug}`)
                                 }
                                 className="border border-[#1E3786] text-[#fff] px-5 py-1.5 rounded-full text-sm font-medium bg-[#1E3786] group-hover:bg-[#fff] group-hover:!text-[#1E3786] transition"
                               >
@@ -599,7 +599,7 @@ const FindYourJob = ({ collegeId }: { collegeId?: any }) => {
 
                       <div className="relative flex items-center justify-end">
                         <button
-                          onClick={() => router.push(`/jobs/${job.slug}/${job.id}`)}
+                          onClick={() => router.push(`/jobs/${job.slug}`)}
                           className="relative z-10 border border-black text-[#595959] px-5 py-1 rounded-full text-base font-small hover:bg-[#1E3786] hover:text-white transition flex items-center gap-2"
                         >
                           Apply Now

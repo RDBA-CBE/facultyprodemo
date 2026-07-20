@@ -5915,7 +5915,7 @@ console.log("acadamicResponsibilityList", state?.acadamicResponsibilityList);
                                   }
                                   isProfile={true}
                                   onClick={() =>
-                                    router.push(`/jobs/${job?.slug}/${job?.id}`)
+                                    router.push(job?.slug ? `/jobs/${job.slug}` : "/jobs")
                                   }
                                 />
                               ) : (
@@ -5930,7 +5930,7 @@ console.log("acadamicResponsibilityList", state?.acadamicResponsibilityList);
                                   }
                                   isProfile={true}
                                   onClick={() =>
-                                    router.push(`/jobs/${job?.slug}/${job?.id}`)
+                                    router.push(job?.slug ? `/jobs/${job.slug}` : "/jobs")
                                   }
                                 />
                               )}
@@ -6009,7 +6009,7 @@ console.log("acadamicResponsibilityList", state?.acadamicResponsibilityList);
                                   console.log("first")
                                 }
                                 onClick={() =>
-                                    router.push(`/jobs?slug=${job?.job?.slug || job?.slug}`)
+                                  router.push(job?.job?.slug ? `/jobs/${job.job.slug}` : "/jobs")
                                 }
                               />
                             </div>

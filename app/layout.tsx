@@ -17,7 +17,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.facultypro.in"),
+  metadataBase: new URL("https://demo.facultypro.in"),
   title: {
     default: "FacultyPro – Academic Job Portal for Faculty Recruitment",
     template: "%s | FacultyPro",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://www.facultypro.in",
+    url: "https://demo.facultypro.in",
     siteName: "FacultyPro",
     title: "FacultyPro – Academic Job Portal for Faculty Recruitment",
     description:
