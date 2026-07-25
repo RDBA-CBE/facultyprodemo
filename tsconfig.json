@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      { "name": "next" }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "css.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/(real-estate)/login2/page.jsx",
+    "app/(real-estate)/test/page.tsx",
+    "app/layout.tsx",
+    "components/common-components/checkbox.jsx",
+    "components/common-components/timePicker.jsx",
+    "components/common-components/toast.jsx",
+    "components/common-components/useDebounce.jsx",
+    "components/common-sidebar/side-menu.jsx",
+    "components/ui/command.jsx",
+    "components/common-components/auth-provider.jsx",
+    "components/common-components/dropdown.jsx",
+    "components/common-components/header.jsx",
+    "components/common-components/textArea.jsx",
+    "components/common-components/root-layout.jsx",
+    "components/common-components/multi-select.jsx",
+    "components/common-components/primaryButton.jsx",
+    "components/ui/custom-full-calendar.jsx",
+    "app/page.jsx",
+    "components/common-sidebar/team-switcher.jsx",
+    "components/common-sidebar/nav-user.jsx",
+    "components/common-sidebar/nav-projects.jsx",
+    "components/common-sidebar/nav-main.jsx"
+  ],
+  "exclude": ["node_modules"]
+}

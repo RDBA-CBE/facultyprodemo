@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    function onVerify(token) {
+      window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'verify', token: token }));
+    }
+  </script>
+</head>
+<body>
+  <div
+    class="g-recaptcha"
+    data-sitekey="6LeEe9gsAAAAAKddSPmwNUF4J-v7zaz8CgeKZ7n3"
+    data-callback="onVerify"
+  ></div>
+</body>
+</html>
