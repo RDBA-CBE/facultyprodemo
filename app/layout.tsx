@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   description:
     "FacultyPro is an academic recruitment platform that connects qualified educators, faculty members, researchers, and academic professionals with colleges and institutions hiring for verified teaching and academic roles.",
   applicationName: "FacultyPro",
+  alternates: {
+    canonical: "https://demo.facultypro.in",
+  },
   openGraph: {
     title: "FacultyPro | Academic Recruitment Platform",
     description:

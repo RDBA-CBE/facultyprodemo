@@ -555,11 +555,11 @@ const Header = () => {
                 <Link href="/" className="flex items-center space-x-3">
                   <img
                     src="/assets/images/faculty-logo.png"
-                    alt="Logo"
+                    alt="FacultyPro"
                     className="!w-[200px] h-10"
                   />
                   {/* <span className="font-medium text-2xl tracking-tight text-white">
-                  Faculty Pro
+                  FacultyPro
                 </span> */}
                 </Link>
               </div>

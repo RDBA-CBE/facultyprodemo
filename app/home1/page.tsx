@@ -36,6 +36,23 @@ export default function Home1Page() {
         {/* <BannerSection /> */}
         {/* <NewHeroSection /> */}
         <SplitBanner/>
+        <section className="bg-white py-10 md:py-14">
+          <div className="section-wid">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#151515] mb-4">
+              What is FacultyPro?
+            </h2>
+            <p className="max-w-4xl text-base md:text-lg leading-8 text-gray-700">
+              FacultyPro is an academic recruitment application for faculty
+              members, researchers, lecturers, professors, academic
+              administrators, colleges, universities, and educational
+              institutions. The platform helps candidates create profiles,
+              search verified academic job openings, apply for suitable roles,
+              and track applications. It also helps institutions publish faculty
+              vacancies, review applications, and connect with qualified
+              academic talent.
+            </p>
+          </div>
+        </section>
         <TopHiringColleges />
          <StatsSection />
         <FindYourJob />
