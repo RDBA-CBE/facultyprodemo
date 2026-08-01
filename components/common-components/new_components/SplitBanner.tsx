@@ -274,15 +274,16 @@ const departmentList = async (search = "") => {
             {/* Heading */}
             <div className="space-y-5">
               <h1 className="text-[30px] md:text-[35px] lg:text-[40px] xl:text-[45px] leading-[50px] lg:leading-[66px] xl:leading-[60px] font-semibold text-white">
-                Are You A Faculty? <br /> Find Your Right Opportunity
+                FacultyPro: Find Verified Academic and Faculty Jobs
               </h1>
-              {/* <p className="text-[#F0F0F0CC] max-w-xl text-base lg:text-lg leading-relaxed">
+              <p className="text-[#F0F0F0CC] max-w-xl text-base lg:text-lg leading-relaxed">
                 FacultyPro connects qualified academic professionals with
-                reputed colleges and universities seeking excellence in
-                teaching, research, and institutional development. Explore
-                verified opportunities and take the next step in your
-                professional journey
-              </p> */}
+                colleges, universities, and educational institutions hiring for
+                verified teaching, research, and academic leadership roles.
+                Candidates can build a profile, search openings, apply to jobs,
+                and track applications, while institutions can reach relevant
+                faculty talent.
+              </p>
             </div>
 
             {/* Search Form */}

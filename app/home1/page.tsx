@@ -2,7 +2,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import LoginGuard from '@/components/common-components/LoginGuard';
 import BannerSection from '@/components/common-components/HeroSection';
 import About from '@/components/common-components/about';
 import Discover from '@/components/common-components/discover';
@@ -28,7 +27,6 @@ import HRSection from '@/components/common-components/new_components/HRSection';
 export default function Home1Page() {
   
   return (
-    <LoginGuard>
     <div className='min-h-screen bg-[#f9fafb]'>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -60,6 +58,5 @@ export default function Home1Page() {
         <Footer />
       </motion.div>
     </div>
-    </LoginGuard>
   );
 }

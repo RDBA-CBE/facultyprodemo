@@ -296,7 +296,7 @@ const TopHiringColleges = () => {
                     />
                   </div>
                   {/* <h3 className="text-2xl  font-medium text-white">
-                    Faculty Pro
+                    FacultyPro
                   </h3> */}
                 </div>
 
