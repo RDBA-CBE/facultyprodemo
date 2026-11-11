@@ -1,9 +1,10 @@
-import Home1Page from "./home1/page";
+
+import Dummy from "./dummy/page";
 
 const App = () => {
   return (
     <div>
-      <Home1Page />
+      <Dummy />
     </div>
   );
 };

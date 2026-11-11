@@ -4,13 +4,13 @@
 @tailwind utilities;
 
 body {
-  font-family: "Fira Sans", sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   font-optical-sizing: auto;
   color: #000;
 }
 
 p {
-  font-family: "Fira Sans", sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   font-optical-sizing: auto;
   color: #383838;
 }
@@ -18,37 +18,38 @@ div,
 span,
 li,
 ul {
+  font-family: var(--font-poppins), sans-serif;
   color: #383838;
   font-size: 16px;
 }
 
 h1 {
-  font-family: "Fira Sans", sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   font-optical-sizing: auto;
 }
 
 h2 {
-  font-family: "Fira Sans", sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   font-optical-sizing: auto;
 }
 
 h3 {
-  font-family: "Fira Sans", sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   font-optical-sizing: auto;
 }
 
 h4 {
-  font-family: "Fira Sans", sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   font-optical-sizing: auto;
 }
 
 h5 {
-  font-family: "Fira Sans", sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   font-optical-sizing: auto;
 }
 
 h6 {
-  font-family: "Fira Sans", sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   font-optical-sizing: auto;
 }
 
@@ -57,7 +58,7 @@ h6 {
 }
 
 .font-sans {
-  font-family: "Fira Sans", sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   font-optical-sizing: auto;
 }
 .section-ti {
